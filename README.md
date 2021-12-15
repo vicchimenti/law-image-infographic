@@ -1,1 +1,1 @@
-# law-image-infographic
+# Law Image Infographic
