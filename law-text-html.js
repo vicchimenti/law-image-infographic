@@ -390,6 +390,8 @@ try {
         let closeCardWrapperFive = '</div>';
 
         // parse for icon
+        let cardIconFive = processImage(imageInfoDict.statIconFive.content);
+
         // let cardIconFive = (imageInfoDict.statIconFive.content) ?
         //     '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconFive.content + '"></span></div>' :
         //     '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
@@ -399,7 +401,7 @@ try {
             '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextFive.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
-        let cardFive = openCardWrapperFive + openCardBodyFive + cardIconFive + cardNumFive + cardHeadingFive + cardTextFive + closeCardBodyFive + closeCardWrapperFive;
+        let cardFive = openCardWrapperFive + openCardBodyFive + cardHeadingFive + cardIconFive + cardTextFive + closeCardBodyFive + closeCardWrapperFive;
 
         cardDeck += cardFive;
     }
