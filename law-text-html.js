@@ -108,7 +108,7 @@ try {
     /***
      *      Dictionary of content
      * */
-    let infoDict = {
+    let imageInfoDict = {
 
         itemName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         infographicTitle: getContentValues('<t4 type="content" name="Infographic Title" output="normal" modifiers="striptags,htmlentities" />'),
@@ -156,8 +156,8 @@ try {
      *  Initialize defaults
      * 
      * */
-    let beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + infoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + infoDict.zoneOption.content + '">';
-    let anchorString = infoDict.anchortag.content || '<span class="visually-hidden">No Anchor</span>';
+    let beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
+    let anchorString = imageInfoDict.anchortag.content || '<span class="visually-hidden">No Anchor</span>';
     let infographicHeader = '<h2 class="sr-only">Infographic</h2>';
     let openTitle = '<div class="infographicTitle p-3 visually-hidden">';
     let closeTitle = '</div>';
@@ -175,11 +175,11 @@ try {
      *  Parse for title
      * 
      * */
-    if (infoDict.infographicTitle.content) {
+    if (imageInfoDict.infographicTitle.content) {
 
-        beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + infoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + infoDict.zoneOption.content + '">';
+        beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
         openTitle = '<div class="infographicTitle p-3">';
-        infographicHeader = '<h2 class="text-center">' + infoDict.infographicTitle.content + '</h2>';
+        infographicHeader = '<h2 class="text-center">' + imageInfoDict.infographicTitle.content + '</h2>';
     }
 
 
@@ -189,10 +189,10 @@ try {
      *  Parse for Footer
      * 
      * */
-    if (infoDict.summaryText.content) {
+    if (imageInfoDict.summaryText.content) {
 
         openSummary = '<div class="infographicSummary p-3">';
-        summaryString = '<p class="summaryText standardContent card-text p-2">' + infoDict.summaryText.content + '</p>';
+        summaryString = '<p class="summaryText standardContent card-text p-2">' + imageInfoDict.summaryText.content + '</p>';
     }
 
 
@@ -203,24 +203,24 @@ try {
      *  each card requires a minimum of a number, heading and color combo
      *  Card 1 requires these by default, cards 2 - 4 are enforced logically
      * */
-    if (infoDict.statNumOne.content) {
+    if (imageInfoDict.statNumOne.content) {
 
         // set card defaults
-        let openCardWrapperOne = '<div class="cardinfographicItem card border-0 rounded-0 color' + infoDict.statColorOne.content + '">';
+        let openCardWrapperOne = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorOne.content + '">';
         let openCardBodyOne = '<div class="card-body p-0 m-3">';
-        let cardNumOne = '<div class="infographicItemNumber"><span class="card-text text-center">' + infoDict.statNumOne.content + '</span></div>';
-        let cardHeadingOne = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + infoDict.statHeadingOne.content + '</p></div>';
+        let cardNumOne = '<div class="infographicItemNumber"><span class="card-text text-center">' + imageInfoDict.statNumOne.content + '</span></div>';
+        let cardHeadingOne = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingOne.content + '</p></div>';
         let closeCardBodyOne = '</div>';
         let closeCardWrapperOne = '</div>';
 
         // parse for icon
-        let cardIconOne = (infoDict.statIconOne.content) ?
-            '<div class="infographicItemIcon"><span class="text-center fa ' + infoDict.statIconOne.content + '"></span></div>' :
+        let cardIconOne = (imageInfoDict.statIconOne.content) ?
+            '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconOne.content + '"></span></div>' :
             '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
 
         // parse for text
-        let cardTextOne = (infoDict.statTextOne.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + infoDict.statTextOne.content + '</p></div>' :
+        let cardTextOne = (imageInfoDict.statTextOne.content) ?
+            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + imageInfoDict.statTextOne.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
 
@@ -236,24 +236,24 @@ try {
      *  Parse for Card two
      * 
      * */
-    if (infoDict.statNumTwo.content && infoDict.statColorTwo.content && infoDict.statHeadingTwo.content) {
+    if (imageInfoDict.statNumTwo.content && imageInfoDict.statColorTwo.content && imageInfoDict.statHeadingTwo.content) {
 
         // set card defaults
-        let openCardWrapperTwo = '<div class="cardinfographicItem card border-0 rounded-0 color' + infoDict.statColorTwo.content + '">';
+        let openCardWrapperTwo = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorTwo.content + '">';
         let openCardBodyTwo = '<div class="card-body p-0 m-3">';
-        let cardNumTwo = '<div class="infographicItemNumber"><span class="card-text text-center">' + infoDict.statNumTwo.content + '</span></div>';
-        let cardHeadingTwo = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + infoDict.statHeadingTwo.content + '</p></div>';
+        let cardNumTwo = '<div class="infographicItemNumber"><span class="card-text text-center">' + imageInfoDict.statNumTwo.content + '</span></div>';
+        let cardHeadingTwo = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingTwo.content + '</p></div>';
         let closeCardBodyTwo = '</div>';
         let closeCardWrapperTwo = '</div>';
 
         // parse for icon
-        let cardIconTwo = (infoDict.statIconTwo.content) ?
-            '<div class="infographicItemIcon"><span class="text-center fa ' + infoDict.statIconTwo.content + '"></span></div>' :
+        let cardIconTwo = (imageInfoDict.statIconTwo.content) ?
+            '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconTwo.content + '"></span></div>' :
             '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
 
         // parse for text
-        let cardTextTwo = (infoDict.statTextTwo.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + infoDict.statTextTwo.content + '</p></div>' :
+        let cardTextTwo = (imageInfoDict.statTextTwo.content) ?
+            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + imageInfoDict.statTextTwo.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardTwo = openCardWrapperTwo + openCardBodyTwo + cardIconTwo + cardNumTwo + cardHeadingTwo + cardTextTwo + closeCardBodyTwo + closeCardWrapperTwo;
@@ -268,24 +268,24 @@ try {
      *  Parse for Card three
      * 
      * */
-    if (infoDict.statNumThree.content && infoDict.statColorThree.content && infoDict.statHeadingThree.content) {
+    if (imageInfoDict.statNumThree.content && imageInfoDict.statColorThree.content && imageInfoDict.statHeadingThree.content) {
 
         // set card defaults
-        let openCardWrapperThree = '<div class="cardinfographicItem card border-0 rounded-0 color' + infoDict.statColorThree.content + '">';
+        let openCardWrapperThree = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorThree.content + '">';
         let openCardBodyThree = '<div class="card-body p-0 m-3">';
-        let cardNumThree = '<div class="infographicItemNumber"><span class="card-text text-center">' + infoDict.statNumThree.content + '</span></div>';
-        let cardHeadingThree = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + infoDict.statHeadingThree.content + '</p></div>';
+        let cardNumThree = '<div class="infographicItemNumber"><span class="card-text text-center">' + imageInfoDict.statNumThree.content + '</span></div>';
+        let cardHeadingThree = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingThree.content + '</p></div>';
         let closeCardBodyThree = '</div>';
         let closeCardWrapperThree = '</div>';
 
         // parse for icon
-        let cardIconThree = (infoDict.statIconThree.content) ?
-            '<div class="infographicItemIcon"><span class="text-center fa ' + infoDict.statIconThree.content + '"></span></div>' :
+        let cardIconThree = (imageInfoDict.statIconThree.content) ?
+            '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconThree.content + '"></span></div>' :
             '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
 
         // parse for text
-        let cardTextThree = (infoDict.statTextThree.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + infoDict.statTextThree.content + '</p></div>' :
+        let cardTextThree = (imageInfoDict.statTextThree.content) ?
+            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + imageInfoDict.statTextThree.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardThree = openCardWrapperThree + openCardBodyThree + cardIconThree + cardNumThree + cardHeadingThree + cardTextThree + closeCardBodyThree + closeCardWrapperThree;
@@ -299,24 +299,24 @@ try {
      *  Parse for Card four
      * 
      * */
-    if (infoDict.statNumFour.content && infoDict.statColorFour.content && infoDict.statHeadingFour.content) {
+    if (imageInfoDict.statNumFour.content && imageInfoDict.statColorFour.content && imageInfoDict.statHeadingFour.content) {
 
         // set card defaults
-        let openCardWrapperFour = '<div class="cardinfographicItem card border-0 rounded-0 color' + infoDict.statColorFour.content + '">';
+        let openCardWrapperFour = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFour.content + '">';
         let openCardBodyFour = '<div class="card-body p-0 m-3">';
-        let cardNumFour = '<div class="infographicItemNumber"><span class="card-text text-center">' + infoDict.statNumFour.content + '</span></div>';
-        let cardHeadingFour = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + infoDict.statHeadingFour.content + '</p></div>';
+        let cardNumFour = '<div class="infographicItemNumber"><span class="card-text text-center">' + imageInfoDict.statNumFour.content + '</span></div>';
+        let cardHeadingFour = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingFour.content + '</p></div>';
         let closeCardBodyFour = '</div>';
         let closeCardWrapperFour = '</div>';
 
         // parse for icon
-        let cardIconFour = (infoDict.statIconFour.content) ?
-            '<div class="infographicItemIcon"><span class="text-center fa ' + infoDict.statIconFour.content + '"></span></div>' :
+        let cardIconFour = (imageInfoDict.statIconFour.content) ?
+            '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconFour.content + '"></span></div>' :
             '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
 
         // parse for text
-        let cardTextFour = (infoDict.statTextFour.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + infoDict.statTextFour.content + '</p></div>' :
+        let cardTextFour = (imageInfoDict.statTextFour.content) ?
+            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + imageInfoDict.statTextFour.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardFour = openCardWrapperFour + openCardBodyFour + cardIconFour + cardNumFour + cardHeadingFour + cardTextFour + closeCardBodyFour + closeCardWrapperFour;
@@ -331,24 +331,24 @@ try {
      *  Parse for Card five
      * 
      * */
-    if (infoDict.statNumFive.content && infoDict.statColorFive.content && infoDict.statHeadingFive.content) {
+    if (imageInfoDict.statNumFive.content && imageInfoDict.statColorFive.content && imageInfoDict.statHeadingFive.content) {
 
         // set card defaults
-        let openCardWrapperFive = '<div class="cardinfographicItem card border-0 rounded-0 color' + infoDict.statColorFive.content + '">';
+        let openCardWrapperFive = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFive.content + '">';
         let openCardBodyFive = '<div class="card-body p-0 m-3">';
-        let cardNumFive = '<div class="infographicItemNumber"><span class="card-text text-center">' + infoDict.statNumFive.content + '</span></div>';
-        let cardHeadingFive = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + infoDict.statHeadingFive.content + '</p></div>';
+        let cardNumFive = '<div class="infographicItemNumber"><span class="card-text text-center">' + imageInfoDict.statNumFive.content + '</span></div>';
+        let cardHeadingFive = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingFive.content + '</p></div>';
         let closeCardBodyFive = '</div>';
         let closeCardWrapperFive = '</div>';
 
         // parse for icon
-        let cardIconFive = (infoDict.statIconFive.content) ?
-            '<div class="infographicItemIcon"><span class="text-center fa ' + infoDict.statIconFive.content + '"></span></div>' :
+        let cardIconFive = (imageInfoDict.statIconFive.content) ?
+            '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconFive.content + '"></span></div>' :
             '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
 
         // parse for text
-        let cardTextFive = (infoDict.statTextFive.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + infoDict.statTextFive.content + '</p></div>' :
+        let cardTextFive = (imageInfoDict.statTextFive.content) ?
+            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center">' + imageInfoDict.statTextFive.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardFive = openCardWrapperFive + openCardBodyFive + cardIconFive + cardNumFive + cardHeadingFive + cardTextFive + closeCardBodyFive + closeCardWrapperFive;
