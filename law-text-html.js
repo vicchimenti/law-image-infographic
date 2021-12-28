@@ -191,23 +191,6 @@ try {
     }
 
 
-    // if (majorDict.frontPageImage.content) {
-
-    //     let imageID = content.get('Main Image').getID();
-    //     let mediaInfo = getMediaInfo(imageID);
-    //     let media = readMedia(imageID);
-    //     let info = new ImageInfo;
-    //     info.setInput(media);
-
-    //     let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;
-
-    //     imageString = (info.check()) ?
-    //         '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-    //         '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
-
-    //     openImageWrapper = '<figure class="figure">';
-    // }
-
 
 
     /***
