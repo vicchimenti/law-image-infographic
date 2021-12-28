@@ -166,29 +166,48 @@ try {
     let endingHTML = '</div>';
 
 
-    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure d-block standardContent visually-hidden">';
+    // let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure d-block standardContent">';
     let closeImageWrapper = '</figure>';
 
 
 
 
-    if (majorDict.frontPageImage.content) {
+    function processImage(rawImage) {
 
-        let imageID = content.get('Main Image').getID();
+
+        let imageID = content.get(rawImage).getID();
         let mediaInfo = getMediaInfo(imageID);
         let media = readMedia(imageID);
         let info = new ImageInfo;
         info.setInput(media);
 
-        let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;
+        let imageString = (info.check()) ?
+            '<img src="' + rawImage + '" class="figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + rawImage + '" class="figure-img card-img-top" alt="" loading="auto" />';
 
-        imageString = (info.check()) ?
-            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+        let imageResult = openImageWrapper + imageString + closeImageWrapper;
 
-        openImageWrapper = '<figure class="figure">';
+        return imageResult;
     }
+
+
+    // if (majorDict.frontPageImage.content) {
+
+    //     let imageID = content.get('Main Image').getID();
+    //     let mediaInfo = getMediaInfo(imageID);
+    //     let media = readMedia(imageID);
+    //     let info = new ImageInfo;
+    //     info.setInput(media);
+
+    //     let imageDefaultAlt = majorDict.frontPageImageCaption.content ? majorDict.frontPageImageCaption.content : majorDict.articleTitle.content;
+
+    //     imageString = (info.check()) ?
+    //         '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+    //         '<img src="' + majorDict.frontPageImage.content + '" class="articleImage figure-img card-img-top" alt="' + imageDefaultAlt + '" loading="auto" />';
+
+    //     openImageWrapper = '<figure class="figure">';
+    // }
 
 
 
@@ -224,7 +243,7 @@ try {
      *  each card requires a minimum of a number, heading and color combo
      *  Card 1 requires these by default, cards 2 - 4 are enforced logically
      * */
-    if (imageInfoDict.statHeadingOne.content && imageInfoDict.statColorOne.content && imageInfoDict.statHeadingOne.content) {
+    if (imageInfoDict.statIconOne.content && imageInfoDict.statColorOne.content && imageInfoDict.statHeadingOne.content) {
 
         // set card defaults
         let openCardWrapperOne = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorOne.content + '">';
@@ -235,6 +254,8 @@ try {
         let closeCardWrapperOne = '</div>';
 
         // parse for icon
+        let cardIconOne = processImage(imageInfoDict.statIconOne.content);
+
         // let cardIconOne = (imageInfoDict.statIconOne.content) ?
         //     '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconOne.content + '"></span></div>' :
         //     '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
@@ -245,7 +266,7 @@ try {
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
 
-        let cardOne = openCardWrapperOne + openCardBodyOne + cardIconOne + cardNumOne + cardHeadingOne + cardTextOne + closeCardBodyOne + closeCardWrapperOne;
+        let cardOne = openCardWrapperOne + openCardBodyOne + cardHeadingOne + cardIconOne + cardTextOne + closeCardBodyOne + closeCardWrapperOne;
 
         cardDeck = cardOne;
     }
@@ -268,6 +289,8 @@ try {
         let closeCardWrapperTwo = '</div>';
 
         // parse for icon
+        let cardIconTwo = processImage(imageInfoDict.statIconTwo.content);
+
         // let cardIconTwo = (imageInfoDict.statIconTwo.content) ?
         //     '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconTwo.content + '"></span></div>' :
         //     '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
@@ -277,7 +300,7 @@ try {
             '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextTwo.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
-        let cardTwo = openCardWrapperTwo + openCardBodyTwo + cardIconTwo + cardNumTwo + cardHeadingTwo + cardTextTwo + closeCardBodyTwo + closeCardWrapperTwo;
+        let cardTwo = openCardWrapperTwo + openCardBodyTwo + cardHeadingTwo + cardIconTwo + cardTextTwo + closeCardBodyTwo + closeCardWrapperTwo;
 
         cardDeck += cardTwo;
     }
