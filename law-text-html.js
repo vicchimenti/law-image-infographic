@@ -325,7 +325,8 @@ try {
         let closeCardWrapperFour = '</div>';
 
         // parse for icon
-        let cardIconFour = processImage(imageInfoDict.statIconFour.content);
+        let imageFourID = content.get('Statistic 4 Media').getID();
+        let cardIconFour = processImage(imageFourID, imageInfoDict.statIconFour.content);
 
         // parse for text
         let cardTextFour = (imageInfoDict.statTextFour.content) ?
