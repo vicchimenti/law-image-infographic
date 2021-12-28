@@ -13,9 +13,12 @@
                 <div class="infographicMedia card-img">
                     <t4 type="content" name="Statistic 1 Media" output="normal" formatter="image/*" />
                 </div>
-                <t4 type="content" name="Statistic 1 Text" output="selective-output" modifiers="medialibrary,nav_sections" process-format="true" format="<div class=&quot;infographicItemText standardContent card-text&quot;>$value</div>" />
+                <div class="infographicItemText standardContent">
+                    <t4 type="content" name="Statistic 1 Text" output="selective-output" modifiers="striptags,htmlentities" format="<p class=&quot;card-title text-center text-uppercase&quot;>$value</p>" />
+                </div>
             </div>
         </div>
+
 
         <t4 type="content" name="Statistic 2 Heading" output="selective-output" process-format="true" format="<div class=&quot;infographicItem imageInfographicMid color<t4 type='content' name='Statistic 2 Color Combination' output='normal' display_field='value' /> col-xs-12 col-lg-3&quot;>"
         />
