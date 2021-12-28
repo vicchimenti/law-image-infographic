@@ -2,14 +2,14 @@
  *      @author Victor Chimenti, MSCS
  *      @see Seattle University School of Law
  *      @file law-text-html.js
- *          Law - Icon Infographic
- *          ID: 5608
+ *          Law - Image Infographic
+ *          ID: 5615
  *
  *      This content type displays from 1 to 5 infographic cards
  *
  *      Document will write once when the page loads
  *
- *      @version 4.9
+ *      @version 5.0
  */
 
 
