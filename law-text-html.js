@@ -136,6 +136,7 @@ try {
 
         statHeadingFive: getContentValues('<t4 type="content" name="Statistic 5 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextFive: getContentValues('<t4 type="content" name="Statistic 5 Text" output="normal" modifiers="striptags,htmlentities" />'),
+        statIconFive: getContentValues('<t4 type="content" name="Statistic 5 Media" output="normal" formatter="path/*" />'),
         statColorFive: getContentValues('<t4 type="content" name="Statistic 5 Color Combination" output="normal" display_field="value" />'),
 
 
