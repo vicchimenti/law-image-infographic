@@ -204,7 +204,7 @@ try {
      *  each card requires a minimum of a number, heading and color combo
      *  Card 1 requires these by default, cards 2 - 4 are enforced logically
      * */
-    if (imageInfoDict.statNumOne.content) {
+    if (imageInfoDict.statHeadingOne.content && imageInfoDict.statColorOne.content && imageInfoDict.statHeadingOne.content) {
 
         // set card defaults
         let openCardWrapperOne = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorOne.content + '">';
@@ -237,7 +237,7 @@ try {
      *  Parse for Card two
      * 
      * */
-    if (imageInfoDict.statNumTwo.content && imageInfoDict.statColorTwo.content && imageInfoDict.statHeadingTwo.content) {
+    if (imageInfoDict.statIconTwo.content && imageInfoDict.statColorTwo.content && imageInfoDict.statHeadingTwo.content) {
 
         // set card defaults
         let openCardWrapperTwo = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorTwo.content + '">';
@@ -269,7 +269,7 @@ try {
      *  Parse for Card three
      * 
      * */
-    if (imageInfoDict.statNumThree.content && imageInfoDict.statColorThree.content && imageInfoDict.statHeadingThree.content) {
+    if (imageInfoDict.statIconThree.content && imageInfoDict.statColorThree.content && imageInfoDict.statHeadingThree.content) {
 
         // set card defaults
         let openCardWrapperThree = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorThree.content + '">';
@@ -300,7 +300,7 @@ try {
      *  Parse for Card four
      * 
      * */
-    if (imageInfoDict.statNumFour.content && imageInfoDict.statColorFour.content && imageInfoDict.statHeadingFour.content) {
+    if (imageInfoDict.statIconFour.content && imageInfoDict.statColorFour.content && imageInfoDict.statHeadingFour.content) {
 
         // set card defaults
         let openCardWrapperFour = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFour.content + '">';
@@ -332,7 +332,7 @@ try {
      *  Parse for Card five
      * 
      * */
-    if (imageInfoDict.statNumFive.content && imageInfoDict.statColorFive.content && imageInfoDict.statHeadingFive.content) {
+    if (imageInfoDict.statIconFive.content && imageInfoDict.statColorFive.content && imageInfoDict.statHeadingFive.content) {
 
         // set card defaults
         let openCardWrapperFive = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFive.content + '">';
