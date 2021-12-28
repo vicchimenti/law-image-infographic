@@ -121,6 +121,8 @@ try {
 
         statHeadingTwo: getContentValues('<t4 type="content" name="Statistic 2 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextTwo: getContentValues('<t4 type="content" name="Statistic 2 Text" output="normal" modifiers="striptags,htmlentities" />'),
+        statIconTwo: getContentValues('<t4 type="content" name="Statistic 2 Media" output="normal" formatter="path/*" />'),
+
         statColorTwo: getContentValues('<t4 type="content" name="Statistic 2 Color Combination" output="normal" display_field="value" />'),
 
         statHeadingThree: getContentValues('<t4 type="content" name="Statistic 3 Heading" output="normal" modifiers="striptags,htmlentities" />'),
