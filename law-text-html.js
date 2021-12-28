@@ -22,7 +22,10 @@
 /***
  *      Import T4 Utilities
  */
+importClass(com.terminalfour.media.IMediaManager);
+importClass(com.terminalfour.spring.ApplicationContextProvider);
 importClass(com.terminalfour.publish.utils.BrokerUtils);
+importClass(com.terminalfour.media.utils.ImageInfo);
 
 
 
@@ -49,6 +52,34 @@ function getContentValues(tag) {
             message: error.message
         }
     }
+}
+
+
+
+
+/***
+ *      Returns a media object
+ */
+function getMediaInfo(mediaID) {
+
+    let mediaManager = ApplicationContextProvider.getBean(IMediaManager);
+    let media = mediaManager.get(mediaID, language);
+
+    return media;
+}
+
+
+
+
+/***
+ *      Returns a media stream object
+ */
+function readMedia(mediaID) {
+
+    let mediaObj = getMediaInfo(mediaID);
+    let oMediaStream = mediaObj.getMedia();
+
+    return oMediaStream;
 }
 
 
