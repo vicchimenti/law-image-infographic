@@ -173,9 +173,9 @@ try {
 
 
 
-    function processImage(rawImage) {
+    function processImage(rawID, rawImage) {
 
-        let imageID = content.get(rawImage).getID();
+        let imageID = rawID;
         let mediaInfo = getMediaInfo(imageID);
         let media = readMedia(imageID);
         let info = new ImageInfo;
@@ -235,7 +235,8 @@ try {
         let closeCardWrapperOne = '</div>';
 
         // parse for icon
-        let cardIconOne = processImage(imageInfoDict.statIconOne.content);
+        let imageOneID = content.get('Statistic 1 Media').getID();
+        let cardIconOne = processImage(imageOneID, imageInfoDict.statIconOne.content);
 
         // parse for text
         let cardTextOne = (imageInfoDict.statTextOne.content) ?
@@ -265,7 +266,8 @@ try {
         let closeCardWrapperTwo = '</div>';
 
         // parse for icon
-        let cardIconTwo = processImage(imageInfoDict.statIconTwo.content);
+        let imageTwoID = content.get('Statistic 2 Media').getID();
+        let cardIconTwo = processImage(imageTwoID, imageInfoDict.statIconTwo.content);
 
         // parse for text
         let cardTextTwo = (imageInfoDict.statTextTwo.content) ?
