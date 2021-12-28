@@ -116,6 +116,7 @@ try {
 
         statHeadingOne: getContentValues('<t4 type="content" name="Statistic 1 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextOne: getContentValues('<t4 type="content" name="Statistic 1 Text" output="normal" modifiers="striptags,htmlentities" />'),
+        statIconOne: getContentValues('<t4 type="content" name="Statistic 1 Media" output="normal" formatter="path/*" />'),
         statColorOne: getContentValues('<t4 type="content" name="Statistic 1 Color Combination" output="normal" display_field="value" />'),
 
         statHeadingTwo: getContentValues('<t4 type="content" name="Statistic 2 Heading" output="normal" modifiers="striptags,htmlentities" />'),
@@ -163,6 +164,11 @@ try {
     let openSummary = '<div class="infographicSummary p-3 visually-hidden">';
     let closeSummary = '</div>';
     let endingHTML = '</div>';
+
+
+    let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
+    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let closeImageWrapper = '</figure>';
 
 
 
