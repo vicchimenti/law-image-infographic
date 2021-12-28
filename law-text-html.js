@@ -113,33 +113,26 @@ try {
         itemName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         infographicTitle: getContentValues('<t4 type="content" name="Infographic Title" output="normal" modifiers="striptags,htmlentities" />'),
         disclaimer: getContentValues('<t4 type="content" name="Disclaimer" output="normal" modifiers="striptags,htmlentities" />'),
-
         statHeadingOne: getContentValues('<t4 type="content" name="Statistic 1 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextOne: getContentValues('<t4 type="content" name="Statistic 1 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconOne: getContentValues('<t4 type="content" name="Statistic 1 Media" output="normal" formatter="path/*" />'),
         statColorOne: getContentValues('<t4 type="content" name="Statistic 1 Color Combination" output="normal" display_field="value" />'),
-
         statHeadingTwo: getContentValues('<t4 type="content" name="Statistic 2 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextTwo: getContentValues('<t4 type="content" name="Statistic 2 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconTwo: getContentValues('<t4 type="content" name="Statistic 2 Media" output="normal" formatter="path/*" />'),
         statColorTwo: getContentValues('<t4 type="content" name="Statistic 2 Color Combination" output="normal" display_field="value" />'),
-
         statHeadingThree: getContentValues('<t4 type="content" name="Statistic 3 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextThree: getContentValues('<t4 type="content" name="Statistic 3 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconThree: getContentValues('<t4 type="content" name="Statistic 3 Media" output="normal" formatter="path/*" />'),
         statColorThree: getContentValues('<t4 type="content" name="Statistic 3 Color Combination" output="normal" display_field="value" />'),
-
         statHeadingFour: getContentValues('<t4 type="content" name="Statistic 4 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextFour: getContentValues('<t4 type="content" name="Statistic 4 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconFour: getContentValues('<t4 type="content" name="Statistic 4 Media" output="normal" formatter="path/*" />'),
         statColorFour: getContentValues('<t4 type="content" name="Statistic 4 Color Combination" output="normal" display_field="value" />'),
-
         statHeadingFive: getContentValues('<t4 type="content" name="Statistic 5 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextFive: getContentValues('<t4 type="content" name="Statistic 5 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconFive: getContentValues('<t4 type="content" name="Statistic 5 Media" output="normal" formatter="path/*" />'),
         statColorFive: getContentValues('<t4 type="content" name="Statistic 5 Color Combination" output="normal" display_field="value" />'),
-
-
         summaryText: getContentValues('<t4 type="content" name="Summary Text" output="normal" modifiers="striptags,htmlentities" />'),
         zoneOption: getContentValues('<t4 type="content" name="Zone Option" output="normal" display_field="value" />'),
         anchortag: getContentValues('<t4 type="meta" meta="html_anchor" />'),
