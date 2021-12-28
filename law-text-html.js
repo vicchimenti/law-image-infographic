@@ -133,7 +133,7 @@ try {
         statTextFive: getContentValues('<t4 type="content" name="Statistic 5 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconFive: getContentValues('<t4 type="content" name="Statistic 5 Media" output="normal" formatter="path/*" />'),
         statColorFive: getContentValues('<t4 type="content" name="Statistic 5 Color Combination" output="normal" display_field="value" />'),
-        summaryText: getContentValues('<t4 type="content" name="Summary Text" output="normal" modifiers="striptags,htmlentities" />'),
+        summaryText: getContentValues('<t4 type="content" name="Summary Text" output="normal" modifiers="medialibrary,nav_sections" />'),
         zoneOption: getContentValues('<t4 type="content" name="Zone Option" output="normal" display_field="value" />'),
         anchortag: getContentValues('<t4 type="meta" meta="html_anchor" />'),
         contentId: getContentValues('<t4 type="meta" meta="content_id" />')
@@ -230,8 +230,8 @@ try {
      * */
     if (imageInfoDict.summaryText.content) {
 
-        openSummary = '<div class="infographicSummary p-3">';
-        summaryString = '<p class="summaryText standardContent card-text p-2">' + imageInfoDict.summaryText.content + '</p>';
+        openSummary = '<div class="infographicSummary summaryText standardContent card-text p-3">';
+        summaryString = imageInfoDict.summaryText.content;
     }
 
 
