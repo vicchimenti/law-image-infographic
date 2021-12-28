@@ -356,6 +356,8 @@ try {
         let closeCardWrapperFour = '</div>';
 
         // parse for icon
+        let cardIconFour = processImage(imageInfoDict.statIconFour.content);
+
         // let cardIconFour = (imageInfoDict.statIconFour.content) ?
         //     '<div class="infographicItemIcon"><span class="text-center fa ' + imageInfoDict.statIconFour.content + '"></span></div>' :
         //     '<div class="infographicItemIcon visually-hidden"><span class="visually-hidden">No Icon</span></div>';
@@ -365,7 +367,7 @@ try {
             '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextFour.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
-        let cardFour = openCardWrapperFour + openCardBodyFour + cardIconFour + cardNumFour + cardHeadingFour + cardTextFour + closeCardBodyFour + closeCardWrapperFour;
+        let cardFour = openCardWrapperFour + openCardBodyFour + cardHeadingFour + cardIconFour + cardTextFour + closeCardBodyFour + closeCardWrapperFour;
 
         cardDeck += cardFour;
     }
