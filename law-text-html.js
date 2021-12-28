@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.5
+ *      @version 5.6
  */
 
 
@@ -201,7 +201,7 @@ try {
     if (imageInfoDict.infographicTitle.content) {
 
         beginningHTML = '<div class="infographicWrapper imageInfographic contentItem col border-0 g-0 m-0 p-0" id="imagegraphic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
-        openTitle = '<div class="infographicTitle w-100 px-0 py-3">';
+        openTitle = '<div class="infographicTitle w-100 px-0 pb-0 pt-3">';
         infographicHeader = '<h2 class="imageInfographicHeader card-header text-center border-0">' + imageInfoDict.infographicTitle.content + '</h2>';
     }
 
