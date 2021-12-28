@@ -167,7 +167,7 @@ try {
 
 
     let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure hidden visually-hidden">';
+    let openImageWrapper = '<figure class="figure d-block standardContent visually-hidden">';
     let closeImageWrapper = '</figure>';
 
 
