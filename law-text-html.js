@@ -355,7 +355,8 @@ try {
         let closeCardWrapperFive = '</div>';
 
         // parse for icon
-        let cardIconFive = processImage(imageInfoDict.statIconFive.content);
+        let imageFiveID = content.get('Statistic 5 Media').getID();
+        let cardIconFive = processImage(imageFiveID, imageInfoDict.statIconFive.content);
 
         // parse for text
         let cardTextFive = (imageInfoDict.statTextFive.content) ?
