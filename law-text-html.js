@@ -167,14 +167,13 @@ try {
 
 
     // let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<figure class="figure d-block standardContent">';
-    let closeImageWrapper = '</figure>';
+    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block standardContent">';
+    let closeImageWrapper = '</figure></div>';
 
 
 
 
     function processImage(rawImage) {
-
 
         let imageID = content.get(rawImage).getID();
         let mediaInfo = getMediaInfo(imageID);
@@ -183,8 +182,8 @@ try {
         info.setInput(media);
 
         let imageString = (info.check()) ?
-            '<img src="' + rawImage + '" class="figure-img card-img-top" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + rawImage + '" class="figure-img card-img-top" alt="" loading="auto" />';
+            '<img src="' + rawImage + '" class="figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + rawImage + '" class="figure-img card-img" alt="" loading="auto" />';
 
         let imageResult = openImageWrapper + imageString + closeImageWrapper;
 
