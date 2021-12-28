@@ -296,7 +296,8 @@ try {
         let closeCardWrapperThree = '</div>';
 
         // parse for icon
-        let cardIconThree = processImage(imageInfoDict.statIconThree.content);
+        let imageThreeID = content.get('Statistic 3 Media').getID();
+        let cardIconThree = processImage(imageThreeID, imageInfoDict.statIconThree.content);
 
         // parse for text
         let cardTextThree = (imageInfoDict.statTextThree.content) ?
