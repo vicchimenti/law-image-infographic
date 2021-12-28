@@ -241,7 +241,7 @@ try {
 
         // parse for text
         let cardTextOne = (imageInfoDict.statTextOne.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextOne.content + '</p></div>' :
+            '<div class="infographicItemText standardContent"><p class="card-text text-center text-uppercase">' + imageInfoDict.statTextOne.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
 
@@ -272,7 +272,7 @@ try {
 
         // parse for text
         let cardTextTwo = (imageInfoDict.statTextTwo.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextTwo.content + '</p></div>' :
+            '<div class="infographicItemText standardContent"><p class="card-text text-center text-uppercase">' + imageInfoDict.statTextTwo.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardTwo = openCardWrapperTwo + openCardBodyTwo + cardHeadingTwo + cardIconTwo + cardTextTwo + closeCardBodyTwo + closeCardWrapperTwo;
@@ -302,7 +302,7 @@ try {
 
         // parse for text
         let cardTextThree = (imageInfoDict.statTextThree.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextThree.content + '</p></div>' :
+            '<div class="infographicItemText standardContent"><p class="card-text text-center text-uppercase">' + imageInfoDict.statTextThree.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardThree = openCardWrapperThree + openCardBodyThree + cardHeadingThree + cardIconThree + cardTextThree + closeCardBodyThree + closeCardWrapperThree;
@@ -331,7 +331,7 @@ try {
 
         // parse for text
         let cardTextFour = (imageInfoDict.statTextFour.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextFour.content + '</p></div>' :
+            '<div class="infographicItemText standardContent"><p class="card-text text-center text-uppercase">' + imageInfoDict.statTextFour.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardFour = openCardWrapperFour + openCardBodyFour + cardHeadingFour + cardIconFour + cardTextFour + closeCardBodyFour + closeCardWrapperFour;
@@ -361,7 +361,7 @@ try {
 
         // parse for text
         let cardTextFive = (imageInfoDict.statTextFive.content) ?
-            '<div class="infographicItemText standardContent card-text"><p class="card-title text-center text-uppercase">' + imageInfoDict.statTextFive.content + '</p></div>' :
+            '<div class="infographicItemText standardContent"><p class="card-text text-center text-uppercase">' + imageInfoDict.statTextFive.content + '</p></div>' :
             '<div class="infographicItemText visually-hidden"><span class="visually-hidden">No Text</span></div>';
 
         let cardFive = openCardWrapperFive + openCardBodyFive + cardHeadingFive + cardIconFive + cardTextFive + closeCardBodyFive + closeCardWrapperFive;
