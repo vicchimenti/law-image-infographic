@@ -149,16 +149,19 @@ try {
      *  Initialize defaults
      * 
      * */
-    let beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
+    let beginningHTML = '<div class="infographicWrapper imageInfographic contentItem g-0" id="imagegraphic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
     let anchorString = imageInfoDict.anchortag.content || '<span class="visually-hidden">No Anchor</span>';
-    let infographicHeader = '<h2 class="sr-only">Infographic</h2>';
-    let openTitle = '<div class="infographicTitle p-3 visually-hidden">';
+    let infographicHeader = '<h2 class="card-header imageInfographicHeader visually-hidden">Image Infographic</h2>';
+    let openTitle = '<div class="infographicTitle standardContent visually-hidden">';
     let closeTitle = '</div>';
+    let openDisclaimer = '<div class="disclaimerWrapper visually-hidden">';
+    let closeDisclaimer = '</div>';
+    let disclaimerString = '<p class="infoGraphicDisclaimer card-text visually-hidden">No Disclaimer Entered</p>';
     let cardDeck = '<span class="card visually-hidden"></span>';
     let openGroup = '<div class="infographic card-group flex-column flex-lg-row">';
     let closeGroup = '</div>';
     let summaryString = '<span class="standardContent card-text visually-hidden"></span>';
-    let openSummary = '<div class="infographicSummary p-3 visually-hidden">';
+    let openSummary = '<div class="infographicSummary visually-hidden">';
     let closeSummary = '</div>';
     let endingHTML = '</div>';
 
@@ -175,9 +178,9 @@ try {
      * */
     if (imageInfoDict.infographicTitle.content) {
 
-        beginningHTML = '<div class="infographicWrapper iconInfographic contentItem col border-0 g-0 m-0 p-0" id="infographic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
-        openTitle = '<div class="infographicTitle p-3">';
-        infographicHeader = '<h2 class="text-center">' + imageInfoDict.infographicTitle.content + '</h2>';
+        beginningHTML = '<div class="infographicWrapper imageInfographic contentItem col border-0 g-0 m-0 p-0" id="imagegraphic' + imageInfoDict.contentId.content + '" data-position-default="Main" data-position-selected="' + imageInfoDict.zoneOption.content + '">';
+        openTitle = '<div class="infographicTitle standardContent p-3">';
+        infographicHeader = '<h2 class="card-header imageInfographicHeader text-center">' + imageInfoDict.infographicTitle.content + '</h2>';
     }
 
 
