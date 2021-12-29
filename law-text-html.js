@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.13
+ *      @version 5.14
  */
 
 
@@ -229,7 +229,7 @@ try {
     if (imageInfoDict.statIconOne.content && imageInfoDict.statColorOne.content && imageInfoDict.statHeadingOne.content) {
 
         // set card defaults
-        let openCardWrapperOne = '<div class="cardinfographicItem card rounded-0 color' + imageInfoDict.statColorOne.content + '">';
+        let openCardWrapperOne = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorOne.content + '">';
         let openCardBodyOne = '<div class="card-body p-0 m-3">';
         let cardHeadingOne = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingOne.content + '</p></div>';
         let closeCardBodyOne = '</div>';
@@ -260,7 +260,7 @@ try {
     if (imageInfoDict.statIconTwo.content && imageInfoDict.statColorTwo.content && imageInfoDict.statHeadingTwo.content) {
 
         // set card defaults
-        let openCardWrapperTwo = '<div class="cardinfographicItem card rounded-0 color' + imageInfoDict.statColorTwo.content + '">';
+        let openCardWrapperTwo = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorTwo.content + '">';
         let openCardBodyTwo = '<div class="card-body p-0 m-3">';
         let cardHeadingTwo = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingTwo.content + '</p></div>';
         let closeCardBodyTwo = '</div>';
@@ -290,7 +290,7 @@ try {
     if (imageInfoDict.statIconThree.content && imageInfoDict.statColorThree.content && imageInfoDict.statHeadingThree.content) {
 
         // set card defaults
-        let openCardWrapperThree = '<div class="cardinfographicItem card rounded-0 color' + imageInfoDict.statColorThree.content + '">';
+        let openCardWrapperThree = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorThree.content + '">';
         let openCardBodyThree = '<div class="card-body p-0 m-3">';
         let cardHeadingThree = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingThree.content + '</p></div>';
         let closeCardBodyThree = '</div>';
@@ -319,7 +319,7 @@ try {
     if (imageInfoDict.statIconFour.content && imageInfoDict.statColorFour.content && imageInfoDict.statHeadingFour.content) {
 
         // set card defaults
-        let openCardWrapperFour = '<div class="cardinfographicItem card rounded-0 color' + imageInfoDict.statColorFour.content + '">';
+        let openCardWrapperFour = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFour.content + '">';
         let openCardBodyFour = '<div class="card-body p-0 m-3">';
         let cardHeadingFour = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingFour.content + '</p></div>';
         let closeCardBodyFour = '</div>';
@@ -349,7 +349,7 @@ try {
     if (imageInfoDict.statIconFive.content && imageInfoDict.statColorFive.content && imageInfoDict.statHeadingFive.content) {
 
         // set card defaults
-        let openCardWrapperFive = '<div class="cardinfographicItem card rounded-0 color' + imageInfoDict.statColorFive.content + '">';
+        let openCardWrapperFive = '<div class="cardinfographicItem card border-0 rounded-0 color' + imageInfoDict.statColorFive.content + '">';
         let openCardBodyFive = '<div class="card-body p-0 m-3">';
         let cardHeadingFive = '<div class="infographicItemHeader"><p class="card-title text-center text-uppercase">' + imageInfoDict.statHeadingFive.content + '</p></div>';
         let closeCardBodyFive = '</div>';
