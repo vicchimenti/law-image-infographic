@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.7
+ *      @version 5.8
  */
 
 
@@ -167,7 +167,7 @@ try {
 
 
     // let imageString = '<span class="imageString hidden visually-hidden" />No Image Provided</span>';
-    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block standardContent">';
+    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block standardContent m-lg-4">';
     let closeImageWrapper = '</figure></div>';
 
 
