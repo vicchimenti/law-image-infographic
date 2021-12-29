@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.10
+ *      @version 5.11
  */
 
 
@@ -112,7 +112,7 @@ try {
 
         itemName: getContentValues('<t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />'),
         infographicTitle: getContentValues('<t4 type="content" name="Infographic Title" output="normal" modifiers="striptags,htmlentities" />'),
-        disclaimer: getContentValues('<t4 type="content" name="Disclaimer" output="normal" modifiers="striptags,htmlentities" />'),
+        // disclaimer: getContentValues('<t4 type="content" name="Disclaimer" output="normal" modifiers="striptags,htmlentities" />'),
         statHeadingOne: getContentValues('<t4 type="content" name="Statistic 1 Heading" output="normal" modifiers="striptags,htmlentities" />'),
         statTextOne: getContentValues('<t4 type="content" name="Statistic 1 Text" output="normal" modifiers="striptags,htmlentities" />'),
         statIconOne: getContentValues('<t4 type="content" name="Statistic 1 Media" output="normal" formatter="path/*" />'),
@@ -154,9 +154,9 @@ try {
     let infographicHeader = '<h2 class="card-header imageInfographicHeader visually-hidden">Image Infographic</h2>';
     let openTitle = '<div class="infographicTitle standardContent visually-hidden">';
     let closeTitle = '</div>';
-    let openDisclaimer = '<div class="disclaimerWrapper visually-hidden">';
-    let closeDisclaimer = '</div>';
-    let disclaimerString = '<p class="infoGraphicDisclaimer card-text visually-hidden">No Disclaimer Entered</p>';
+    // let openDisclaimer = '<div class="disclaimerWrapper visually-hidden">';
+    // let closeDisclaimer = '</div>';
+    // let disclaimerString = '<p class="infoGraphicDisclaimer card-text visually-hidden">No Disclaimer Entered</p>';
     let cardDeck = '<span class="card visually-hidden"></span>';
     let openGroup = '<div class="infographic card-group flex-column flex-lg-row">';
     let closeGroup = '</div>';
