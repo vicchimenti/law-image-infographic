@@ -9,7 +9,7 @@
  *
  *      Document will write once when the page loads
  *
- *      @version 5.15
+ *      @version 5.16
  */
 
 
@@ -160,7 +160,7 @@ try {
     let openSummary = '<div class="infographicSummary visually-hidden">';
     let closeSummary = '</div>';
     let endingHTML = '</div>';
-    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block standardContent m-3 m-xl-4">';
+    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block">';
     let closeImageWrapper = '</figure></div>';
 
 
@@ -175,8 +175,8 @@ try {
         info.setInput(media);
 
         let imageString = (info.check()) ?
-            '<img src="' + rawImage + '" class="figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + rawImage + '" class="figure-img card-img" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" loading="auto" />';
+            '<img src="' + rawImage + '" class="figure-img card-img p-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + rawImage + '" class="figure-img card-img p-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" loading="auto" />';
 
         let imageResult = openImageWrapper + imageString + closeImageWrapper;
 
