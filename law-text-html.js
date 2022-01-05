@@ -175,8 +175,8 @@ try {
         info.setInput(media);
 
         let imageString = (info.check()) ?
-            '<img src="' + rawImage + '" class="figure-img card-img p-0 p-lg-4" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
-            '<img src="' + rawImage + '" class="figure-img card-img p-0 p-lg-4" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" loading="auto" />';
+            '<img src="' + rawImage + '" class="figure-img card-img p-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" width="' + info.getWidth() + '" height="' + info.getHeight() + '" loading="auto" />' :
+            '<img src="' + rawImage + '" class="figure-img card-img p-0" aria-label="' + mediaInfo.getName() + '" alt="' + mediaInfo.getDescription() + '" loading="auto" />';
 
         let imageResult = openImageWrapper + imageString + closeImageWrapper;
 
