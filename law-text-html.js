@@ -160,7 +160,7 @@ try {
     let openSummary = '<div class="infographicSummary visually-hidden">';
     let closeSummary = '</div>';
     let endingHTML = '</div>';
-    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block m-lg-4">';
+    let openImageWrapper = '<div class="infographicMedia"><figure class="figure d-block">';
     let closeImageWrapper = '</figure></div>';
 
 
